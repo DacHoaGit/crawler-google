@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('results', function (Blueprint $table) {
             $table->id();
             $table->text('link');
+            $table->integer('status')->default(0);
             $table->foreignId('search_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

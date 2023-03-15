@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Listeners\DetectQueuedListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Queue\Events\JobQueued;
 use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
@@ -18,8 +20,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        JobQueued::class => [
+            DetectQueuedListener::class,
+        ]
     ];
-
     /**
      * Register any events for your application.
      *

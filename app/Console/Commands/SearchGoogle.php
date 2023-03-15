@@ -19,8 +19,12 @@ class SearchGoogle extends Command
      *
      * @var string
      */
-    protected $signature = 'app:search-google {status : The status value (0, 1 or -1)} {limit : The limit value}';
-
+    protected $signature = 'search-google:run {--status= : The status pending, false, success } {--limit=: The limit value}';
+    private $arrStatus = [
+        "success" => 1,
+        "pending" => 0,
+        "false" => -1
+    ];
     /**
      * The console command description.
      *
@@ -34,25 +38,24 @@ class SearchGoogle extends Command
      */
     public function handle()
     {
-        $validator = Validator::make($this->arguments(), [
-            'status' => ['in:0,1,-1'],
-            'limit' => ['numeric'],
-        ]);
-        if ($validator->fails()) {
-            $this->error($validator->errors()->first());
-            return 1;
-        }
-        echo $this->argument('status');
+        $limit = $this->option('limit') ?? 10;
+        $status = strtolower($this->option('status'));
+        $status = $this->arrStatus[$status];
+        $this->info($status);
 
-        //list count search
-        if (!is_null($this->argument('status')) && !is_null($this->argument('limit'))) {
+        if ($status && $limit) {
             $this->line("Dang xu ly");
 
-            $Searches = Search::where('status', $this->argument('status'))->limit($this->argument('limit'))->get();
+            $Searches = Search::where('status', $status)->limit($limit)->get();
             foreach ($Searches as $search) {
                 ProcessSearchGoogle::dispatch($search)->onQueue('search');
+//            }
             }
+            return Command::SUCCESS;
         }
-        return Command::SUCCESS;
+
     }
 }
+
+
+

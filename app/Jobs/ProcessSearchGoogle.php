@@ -33,6 +33,10 @@ class ProcessSearchGoogle implements ShouldQueue
     /**
      * Execute the job.
      */
+
+    public function getLink(){
+        return 'https://uk.linkedin.com/in/grace-towne-216b85a0%3Ftrk%3Dpublic_profile_browsemap';
+    }
     public function handle(): void
     {
         try {
@@ -63,4 +67,9 @@ class ProcessSearchGoogle implements ShouldQueue
             Log::error('Job failed: ' . $exception->getMessage());
         }
     }
+    public function getQueue()
+    {
+        return 'search';
+    }
+
 }

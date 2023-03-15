@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/search',[\App\Http\Controllers\TestController::class,'index']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/get-links-by-status',[\App\Http\Controllers\ApiResultController::class,'getLinksByStatus']);
+Route::get('/test',[\App\Http\Controllers\TestController::class,'index']);
+
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
