@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1be9fd0647156295a425de4785c184b8",
+    "content-hash": "9a384037acb53e617f4300605366507e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -432,16 +432,16 @@
         },
         {
             "name": "dachoagit/search",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:trainee_123jobgroup/ttshoa/google-keyword.git",
-                "reference": "2c07701f6700e6a458fadbbb1d93b7a78bf48e1f"
+                "reference": "306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/trainee_123jobgroup%2Fttshoa%2Fgoogle-keyword/repository/archive.zip?sha=2c07701f6700e6a458fadbbb1d93b7a78bf48e1f",
-                "reference": "2c07701f6700e6a458fadbbb1d93b7a78bf48e1f",
+                "url": "https://gitlab.com/api/v4/projects/trainee_123jobgroup%2Fttshoa%2Fgoogle-keyword/repository/archive.zip?sha=306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6",
+                "reference": "306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Dachoagit\\Search\\": "src/"
+                    "Dachoagit\\Search\\": "src/",
+                    "Dachoagit\\Search\\app\\": "src/app"
                 }
             },
             "authors": [
@@ -461,10 +462,10 @@
                 }
             ],
             "support": {
-                "source": "https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword/-/tree/1.0.7",
+                "source": "https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword/-/tree/1.0.8",
                 "issues": "https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword/-/issues"
             },
-            "time": "2023-03-15T13:34:52+07:00"
+            "time": "2023-03-16T08:47:26+07:00"
         },
         {
             "name": "dflydev/dot-access-data",

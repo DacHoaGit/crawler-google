@@ -2,14 +2,9 @@
 
 namespace App\Console\Commands;
 
-use App\Enums\SearchStatusEnum;
-use App\Jobs\ProcessSearchGoogle;
-use App\Models\Proxy;
 use App\Models\Search;
+use Dachoagit\Search\Jobs\ProcessSearchGoogle;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
-use Dachoagit\Search\Facade\SearchGoogle as SearchGG;
 
 
 class SearchGoogle extends Command

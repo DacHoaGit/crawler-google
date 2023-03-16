@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\SearchRequest;
-use App\Jobs\ProcessSearchGoogle;
 use App\Models\Result;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Backpack\CRUD\app\Library\Widget;
-use Dachoagit\Search\Facade\SearchGoogle;
+use Dachoagit\Search\Jobs\ProcessSearchGoogle;
 
 /**
  * Class SearchCrudController
