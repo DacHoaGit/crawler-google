@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Dachoagit\Search\Database\Seeders\ProxySeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SearchSeeder::class);
+        $this->call(ProxySeeder::class);
 
         // \App\Models\User::factory(10)->create();
     }

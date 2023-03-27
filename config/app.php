@@ -161,7 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
@@ -176,8 +175,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\ViewDashboardServiceProvider::class,
-        \Dachoagit\Search\Providers\SearchGoogleProvider::class,
-
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
     ],
 
     /*
@@ -232,8 +230,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'SearchGoogle' => Dachoagit\Search\Facade\SearchGoogle::class,
-
     ],
 
 ];

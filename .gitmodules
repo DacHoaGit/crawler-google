@@ -1,0 +1,6 @@
+[submodule "platform/base-core"]
+	path = platform/base-core
+	url = https://gitlab.com/spider-123xxx/auto-crawl/packages/base-core.git
+[submodule "platform/google-keyword"]
+	path = platform/google-keyword
+	url = https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword.git

@@ -26,17 +26,17 @@ class DetectQueuedListener
     {
         $queueName = 'auto-crawl.crawler.update-link-status'; // Tên queue cần lắng nghe
 
-        $job = $event->job;
-
-        $queue = $job->getQueue();
-
-        if ($queue === $queueName) {
-            $data = json_decode($job->getData())->getContent();
-            $link = $data->link;
-            $status = $data->status;
-            $result = Result::where('link',$link)->first();
-            $result->status = $status;
-            $result->save();
-        }
+//        $job = $event->job;
+//
+//        $queue = $job->getQueue();
+//
+//        if ($queue === $queueName) {
+//            $data = json_decode($job->getData())->getContent();
+//            $link = $data->link;
+//            $status = $data->status;
+//            $result = Result::where('link',$link)->first();
+//            $result->status = $status;
+//            $result->save();
+//        }
     }
 }

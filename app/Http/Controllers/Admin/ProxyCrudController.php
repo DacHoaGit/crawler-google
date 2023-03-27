@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\ProxyRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Backpack\CRUD\app\Library\Widget;
+use ConsoleTVs\Charts\Classes\Chartjs\Chart;
 
 /**
  * Class ProxyCrudController
@@ -18,7 +20,9 @@ class ProxyCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
-
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation {
+        show as traitShow;
+    }
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
      *
@@ -50,6 +54,31 @@ class ProxyCrudController extends CrudController
          * - CRUD::column('price')->type('number');
          * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
          */
+        $this->crud->addFilter([
+            'name' => 'status',
+            'type' => 'select2',
+            'label' => 'Status'
+        ], function () {
+            return [
+                0 => 'Chưa sử dụng',
+                1 => 'Đang sử dụng',
+                -1 => 'Có lỗi xảy ra',
+            ];
+        }, function ($value) { // if the filter is active
+            if ($value == -1) {
+                $this->crud->addClause('whereIn', 'status', [-1, -2]);
+            } else {
+                $this->crud->addClause('where', 'status', $value);
+            }
+        });
+        $this->crud->addColumn([
+            'name'      => 'row_number',
+            'type'      => 'row_number',
+            'label'     => '#',
+            'orderable' => false,
+        ])->makeFirstColumn();
+
+        
     }
 
     /**
@@ -80,5 +109,28 @@ class ProxyCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    public function show($id){
+
+        Widget::add([ 
+            'type'       => 'chart',
+            'controller' => \App\Http\Controllers\Admin\Charts\LogProxiesChartController::class,
+            'data' => [
+                'id' => $id 
+            ],
+            // OPTIONALS
+        
+            // 'class'   => 'card mb-2',
+            'wrapper' => ['class'=> 'w-100'] ,
+            // 'content' => [
+                 // 'header' => 'New Users', 
+                 // 'body'   => 'This chart should make it obvious how many new users have signed up in the past 7 days.<br><br>',
+            // ],
+        ]);
+        $content = $this->traitShow($id);
+        // cutom logic after
+
+        return $content;
     }
 }

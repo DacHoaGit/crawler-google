@@ -3,3 +3,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('search') }}'><i class='nav-icon la la-question'></i> Searches</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('result') }}'><i class='nav-icon la la-question'></i> Results</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('proxy') }}'><i class='nav-icon la la-question'></i> Proxies</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('log-proxy') }}'><i class='nav-icon la la-question'></i> Log proxies</a></li>

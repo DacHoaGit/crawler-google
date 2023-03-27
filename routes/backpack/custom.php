@@ -21,4 +21,6 @@ Route::group([
     Route::get('search/{id}/search', [\App\Http\Controllers\Admin\SearchCrudController::class,'searchGoogle']);
 
     Route::crud('proxy', 'ProxyCrudController');
+    Route::get('charts/log-proxies', 'Charts\LogProxiesChartController@response')->name('charts.log-proxies.index');
+    Route::crud('log-proxy', 'LogProxyCrudController');
 }); // this should be the absolute last line of this file

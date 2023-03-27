@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a384037acb53e617f4300605366507e",
+    "content-hash": "990731917b542f26d0f76d06a3b343eb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -156,6 +156,111 @@
             "time": "2022-08-08T16:30:20+00:00"
         },
         {
+            "name": "balping/json-raw-encoder",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/balping/json-raw-encoder.git",
+                "reference": "e2b0ab888342b0716f1f0628e2fa13b345c5f276"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/balping%2Fjson-raw-encoder/repository/archive.zip?sha=e2b0ab888342b0716f1f0628e2fa13b345c5f276",
+                "reference": "e2b0ab888342b0716f1f0628e2fa13b345c5f276",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Balping\\JsonRaw\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Balázs Dura-Kovács"
+                }
+            ],
+            "description": "Encode arrays to json with raw JS objects (eg. callbacks) in them",
+            "keywords": [
+                "callback",
+                "encode",
+                "json"
+            ],
+            "support": {
+                "issues": "https://gitlab.com/api/v4/projects/6731265/issues"
+            },
+            "time": "2020-06-06T16:24:31+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-async-queue",
+            "version": "v0.7.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-async-queue.git",
+                "reference": "f2ac186f7afbfe5ef22445bc4dd9d036907c35e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-async-queue/zipball/f2ac186f7afbfe5ef22445bc4dd9d036907c35e4",
+                "reference": "f2ac186f7afbfe5ef22445bc4dd9d036907c35e4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^6|^7|^8",
+                "illuminate/support": "^6|^7|^8",
+                "php": ">=7",
+                "symfony/process": "^4|^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.7-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Queue\\AsyncServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Queue\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Async Queue Driver for Laravel (Push to background)",
+            "keywords": [
+                "async",
+                "background",
+                "laravel",
+                "queue"
+            ],
+            "support": {
+                "issues": "https://github.com/barryvdh/laravel-async-queue/issues",
+                "source": "https://github.com/barryvdh/laravel-async-queue/tree/v0.7.5"
+            },
+            "time": "2021-05-17T08:26:03+00:00"
+        },
+        {
             "name": "bensampo/laravel-enum",
             "version": "v4.2.0",
             "source": {
@@ -295,6 +400,55 @@
             "time": "2022-08-10T22:54:19+00:00"
         },
         {
+            "name": "campo/random-user-agent",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joecampo/random-user-agent.git",
+                "reference": "4a88bd90f66ca398b050b19848e3c6ea143ce8a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joecampo/random-user-agent/zipball/4a88bd90f66ca398b050b19848e3c6ea143ce8a0",
+                "reference": "4a88bd90f66ca398b050b19848e3c6ea143ce8a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Campo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Campo",
+                    "email": "jcampo@gmail.com"
+                }
+            ],
+            "description": "Generate real random user-agents.",
+            "keywords": [
+                "spoofing user",
+                "user agent",
+                "user agents",
+                "user-agent"
+            ],
+            "support": {
+                "issues": "https://github.com/joecampo/random-user-agent/issues",
+                "source": "https://github.com/joecampo/random-user-agent/tree/master"
+            },
+            "time": "2018-06-13T14:26:21+00:00"
+        },
+        {
             "name": "composer/package-versions-deprecated",
             "version": "1.11.99.5",
             "source": {
@@ -368,6 +522,62 @@
             "time": "2022-01-17T14:14:24+00:00"
         },
         {
+            "name": "consoletvs/charts",
+            "version": "6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ConsoleTVs/Charts.git",
+                "reference": "2bfd2c624fc68b9679b4b1c61c4de50fdae1b5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ConsoleTVs/Charts/zipball/2bfd2c624fc68b9679b4b1c61c4de50fdae1b5f9",
+                "reference": "2bfd2c624fc68b9679b4b1c61c4de50fdae1b5f9",
+                "shasum": ""
+            },
+            "require": {
+                "balping/json-raw-encoder": "^1.0",
+                "illuminate/console": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ConsoleTVs\\Charts\\ChartsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ConsoleTVs\\Charts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Èrik Campobadal Forés",
+                    "email": "soc@erik.cat"
+                }
+            ],
+            "description": "The laravel charting package",
+            "support": {
+                "issues": "https://github.com/ConsoleTVs/Charts/issues",
+                "source": "https://github.com/ConsoleTVs/Charts/tree/6.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/ErikCampobadal",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2023-02-01T06:52:41+00:00"
+        },
+        {
             "name": "creativeorange/gravatar",
             "version": "v1.0.23",
             "source": {
@@ -432,27 +642,30 @@
         },
         {
             "name": "dachoagit/search",
-            "version": "1.0.8",
-            "source": {
-                "type": "git",
-                "url": "git@gitlab.com:trainee_123jobgroup/ttshoa/google-keyword.git",
-                "reference": "306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/trainee_123jobgroup%2Fttshoa%2Fgoogle-keyword/repository/archive.zip?sha=306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6",
-                "reference": "306d7a2d1dc93202ab802b606b4dfc38a8ca4dc6",
-                "shasum": ""
+                "type": "path",
+                "url": "./platform/google-keyword",
+                "reference": "9f6139442b9384a2223fd988916b2d0f23105ce1"
             },
             "require": {
-                "symfony/dom-crawler": "^6.2",
-                "symfony/http-client": "^6.2"
+                "symfony/dom-crawler": "^6.0",
+                "symfony/http-client": "^6.0"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dachoagit\\Search\\Providers\\SearchGoogleProvider"
+                    ],
+                    "aliases": {
+                        "SearchGoogle": "Dachoagit\\Search\\Facade\\SearchGoogle"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Dachoagit\\Search\\": "src/",
-                    "Dachoagit\\Search\\app\\": "src/app"
+                    "Dachoagit\\Search\\": "src/"
                 }
             },
             "authors": [
@@ -461,11 +674,10 @@
                     "email": "ledachoa99@gmail.com"
                 }
             ],
-            "support": {
-                "source": "https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword/-/tree/1.0.8",
-                "issues": "https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword/-/issues"
-            },
-            "time": "2023-03-16T08:47:26+07:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2638,6 +2850,69 @@
             "time": "2023-02-06T13:44:46+00:00"
         },
         {
+            "name": "myclabs/php-enum",
+            "version": "1.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/php-enum.git",
+                "reference": "a867478eae49c9f59ece437ae7f9506bfaa27483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/a867478eae49c9f59ece437ae7f9506bfaa27483",
+                "reference": "a867478eae49c9f59ece437ae7f9506bfaa27483",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "1.*",
+                "vimeo/psalm": "^4.6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                },
+                "classmap": [
+                    "stubs/Stringable.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "support": {
+                "issues": "https://github.com/myclabs/php-enum/issues",
+                "source": "https://github.com/myclabs/php-enum/tree/1.8.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/php-enum",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-08-04T09:53:51+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.66.0",
             "source": {
@@ -3862,6 +4137,43 @@
                 }
             ],
             "time": "2023-01-12T18:13:24+00:00"
+        },
+        {
+            "name": "spider-auto-crawl/base-core",
+            "version": "dev-hoa",
+            "dist": {
+                "type": "path",
+                "url": "./platform/base-core",
+                "reference": "d4d0864032a4cdbc7f591efbdea251d8c36b8ca5"
+            },
+            "require": {
+                "myclabs/php-enum": "^1.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SpiderAutoCrawl\\BaseCore\\BaseCoreServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SpiderAutoCrawl\\BaseCore\\": "src/",
+                    "SpiderAutoCrawl\\BaseCore\\Test\\": "test/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "jesuisviet",
+                    "email": "viet.dv1104@gmail.com"
+                }
+            ],
+            "description": "Package base cho du an auto-crawl",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -9066,7 +9378,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "dachoagit/search": 20,
+        "spider-auto-crawl/base-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
