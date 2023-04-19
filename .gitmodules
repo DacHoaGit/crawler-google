@@ -4,3 +4,13 @@
 [submodule "platform/google-keyword"]
 	path = platform/google-keyword
 	url = https://gitlab.com/trainee_123jobgroup/ttshoa/google-keyword.git
+[submodule "platform/url-detector"]
+	path = platform/url-detector
+	url = git@gitlab.com:spider-123xxx/auto-crawl/packages/url-detector.git
+[submodule "platform/rank-keywork-core"]
+	path = platform/rank-keywork-core
+	url = git@gitlab.com:reporter-group/rank-keyword/rank-keyword-core/rank-keywork-core.git
+[submodule "platform/rank-keyword-core"]
+	path = platform/rank-keyword-core
+	url = git@gitlab.com:reporter-group/rank-keyword/rank-keyword-core/rank-keyword-core.git
+	branch = master
