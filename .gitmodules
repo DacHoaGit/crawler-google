@@ -9,7 +9,7 @@
 	url = git@gitlab.com:spider-123xxx/auto-crawl/packages/url-detector.git
 [submodule "platform/rank-keywork-core"]
 	path = platform/rank-keywork-core
-	url = git@gitlab.com:reporter-group/rank-keyword/rank-keyword-core/rank-keywork-core.git
+	url = git@gitlab.com:reporter-group/rank-keyword/rank-keyword-core/rank-keyword-core.git
 [submodule "platform/rank-keyword-core"]
 	path = platform/rank-keyword-core
 	url = git@gitlab.com:reporter-group/rank-keyword/rank-keyword-core/rank-keyword-core.git
