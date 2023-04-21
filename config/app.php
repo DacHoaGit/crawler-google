@@ -176,6 +176,8 @@ return [
 
         App\Providers\ViewDashboardServiceProvider::class,
         ConsoleTVs\Charts\ChartsServiceProvider::class,
+
+        Dachoagit\GoogleKeywordView\Providers\GoogleKeywordProvider::class,
     ],
 
     /*

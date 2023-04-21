@@ -1,5 +1,6 @@
 <?php
 
+use Dachoagit\GoogleKeywordView\Controllers\Admin\LogProxyCrudController;
 use Illuminate\Support\Facades\Route;
 
 // --------------------------
@@ -16,11 +17,12 @@ Route::group([
     ),
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-    Route::crud('search', 'SearchCrudController');
-    Route::crud('result', 'ResultCrudController');
-    Route::get('search/{id}/search', [\App\Http\Controllers\Admin\SearchCrudController::class,'searchGoogle']);
+    // Route::crud('search', 'SearchCrudController');
+    // Route::crud('result', 'ResultCrudController');
+    // Route::get('search/{id}/search', [\App\Http\Controllers\Admin\SearchCrudController::class,'searchGoogle']);
 
-    Route::crud('proxy', 'ProxyCrudController');
-    Route::get('charts/log-proxies', 'Charts\LogProxiesChartController@response')->name('charts.log-proxies.index');
-    Route::crud('log-proxy', 'LogProxyCrudController');
+    // Route::crud('proxy', 'ProxyCrudController');
+    // Route::get('charts/log-proxies', 'Charts\LogProxiesChartController@response')->name('charts.log-proxies.index');
+    // Route::crud('log-proxy', LogProxyCrudController::class);
+    Route::get('charts/log-proxy-status', 'Charts\LogProxyStatusChartController@response')->name('charts.log-proxy-status.index');
 }); // this should be the absolute last line of this file
